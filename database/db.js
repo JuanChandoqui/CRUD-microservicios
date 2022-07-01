@@ -1,10 +1,12 @@
 const mysql = require('mysql');
 
 const conexion = mysql.createConnection({
-    host: 'localhost',
+    host: 'mysqlcontainer',
+    port: 3306,
     user: 'root',
     password: '1234',
-    database: 'node-crud'
+    database: 'nodecrud',
+    insecureAuth: true
 });
 
 conexion.connect((error) =>{
