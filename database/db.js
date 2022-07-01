@@ -13,6 +13,11 @@ conexion.connect((error) =>{
         return 
     }
     console.log('CONEXION SUCESSFULLY')
+    const sqlQuery =  'CREATE TABLE IF NOT EXISTS user(id int AUTO_INCREMENT, username VARCHAR(50), email VARCHAR(50), PRIMARY KEY(id))';
+    conexion.query(sqlQuery, (err) => {
+       if (err) throw err;
+       console.log('TABLE CREATED');
+   });
 })
 
 module.exports = conexion;

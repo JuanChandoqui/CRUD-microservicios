@@ -10,6 +10,5 @@ app.use('/', require('./utils/router'));
 
 
 app.listen(3000, ()=>{
-    console.log('SERVER LISTENING IN 3000')
+    console.log('SERVER LISTENING IN 3000');
 });
-
